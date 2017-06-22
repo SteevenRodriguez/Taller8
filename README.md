@@ -14,5 +14,5 @@ Este es un repositorio esqueleto para la práctica 8 de la materia Programación
 
 Edite esta lista y añada los nombres de los integrantes, luego borre esta línea.
 
-* Integrante 1
-* Integrante 2
+* Anibal Gamboa
+* steeven rodriguez

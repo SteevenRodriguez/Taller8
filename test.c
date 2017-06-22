@@ -28,27 +28,34 @@ int main(int argc, char *argv[])
 		return -1;
 	}
 	 int i=1;
-int arreglo[14];
-int arreglo2[14];	
-for(i;i<14;i++){
-int hum=0;	
-char buff ='t';
-char humedad ='h';
-write(fd,&buff,1);
+int totalh = 0; 
+int totalt = 0;
+int arreglo[12];
+int arreglo2[12];	
+for(i;i<12;i++){
+	int hum=0;	
+	char buff ='t';
+	char humedad ='h';
+	write(fd,&buff,1);
 
-int buff2=0;
-read(fd,&buff2,1);
-arreglo[i]=buff2;
-printf("temperatura: %d/n",(int)buff2);
-
-write(fd,&humedad,1);
-read(fd,&hum,1);
-arreglo2[i]=humedad;
-usleep(5000000);
+	int buff2=0;
+	read(fd,&buff2,1);
+	arreglo[i]=buff2;
+	printf("temperatura: %d/n",(int)buff2);
+	
+	write(fd,&humedad,1);
+	read(fd,&hum,1);
+	arreglo2[i]=hum;
+	total += hum;
+	usleep(5000000);
 
 }
 
+int promedioh = totalh/12;
+int promediot = totalt/12;
 
+
+	
 
 
 
